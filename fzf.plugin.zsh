@@ -8,6 +8,8 @@ if command -v fzf &> /dev/null; then
     [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
     [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
     [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+    [ -f completion.zsh ] && source completion.zsh      # Source local copy
+    [ -f key-bindings.zsh ] && source key-bindings.zsh  # Source local copy
     
     if [[ "$(uname -s)" == "Darwin" && "$(command -v brew)" != "" ]] ; then
         local FZF_HOME=$(brew --prefix)/opt/fzf
